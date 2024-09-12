@@ -157,8 +157,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Recent studies in text-to-image customization show great success in generating personalized object variants given several images of a subject. 
+            While existing methods focus more on preserving the identity of the subject, they often fall short of controlling the spatial relationship between objects. 
+            In this work, we introduce GroundingBooth, a framework that achieves zero-shot instance-level spatial grounding on both foreground subjects and background objects in the text-to-image customization task. 
+            Our proposed text-image grounding module and masked cross-attention layer allow us to generate personalized images with both accurate layout alignment and identity preservation while maintaining text-image coherence. 
+            With such layout control, our model inherently enables the customization of multiple subjects at once. 
+            Our model is evaluated on both layout-guided image synthesis and reference-based customization tasks, showing strong results compared to existing methods. 
+            Our work is the first work to achieve a joint grounding of both subject-driven foreground generation and text-driven background generation.
         </div>
       </div>
     </div>
@@ -174,9 +179,11 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/figrue1.pdf" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          We propose GroundingBooth, a framework for grounded text-to-image customization. GroundingBooth supports:
+          (a) grounded single-subject customization, and (b) multi-subjects and text entities joint grounded customization, 
+          achieving joint grounding of subject-driven foreground and text-driven background generation with identity preservation and text-image alignment. 
         </h2>
       </div>
       <div class="item">
