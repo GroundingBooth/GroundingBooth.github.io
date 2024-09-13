@@ -244,15 +244,19 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/pipeline_final.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          An overview of our proposed framework. It is divided into two steps: (1) Feature extraction. 
+        <!-- <h2 class="subtitle has-text-centered"> -->
+          <!-- An overview of our proposed framework. It is divided into two steps: (1) Feature extraction. 
           We use CLIP encoder and DINOv2 encoder to extract text and image embeddings respectively, and use our proposed grounding module to extract the grounding tokens. 
           (2) Foreground-background cross-attention control in each transformer block of U-Net. During training, we use dataset with single reference object. 
-          In inference stage, the pipeline allows feature injection of multiple reference objects through copied masked cross-attention layers.
-        </h2>
+          In inference stage, the pipeline allows feature injection of multiple reference objects through copied masked cross-attention layers. -->
+        <!-- </h2> -->
 
         <div class="content has-text-justified"></div>
           <p>
+            An overview of our proposed framework. It is divided into two steps: (1) Feature extraction. 
+            We use CLIP encoder and DINOv2 encoder to extract text and image embeddings respectively, and use our proposed grounding module to extract the grounding tokens. 
+           (2) Foreground-background cross-attention control in each transformer block of U-Net. During training, we use dataset with single reference object. 
+            In inference stage, the pipeline allows feature injection of multiple reference objects through copied masked cross-attention layers.
             Our work is the first attempt that introduces precise grounding in the customized image synthesis task, 
             which jointly controls the size and location for both the image-driven foreground objects and text-driven background, 
             adaptively harmonizing the poses of the reference objects as well as faithfully preserving their identity.
