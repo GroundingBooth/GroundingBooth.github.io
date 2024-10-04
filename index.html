@@ -194,20 +194,33 @@
         <!-- Your image here -->
         <img src="static/images/multi_obj.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Results show that our method achieves joint foreground-background control with text alignment and identity preservation of foreground objects. 
-          Even when the bounding box of the foreground objects has a large overlap with the background text entities, 
-          the model can distinguish subject-driven foreground generation from text-driven background generation, 
-          effectively avoiding context blending and remaining scene hallucination.  
+          Multi-concept customization on DreamBench objects. Results show that our method achieves joint foreground-background control with text alignment and identity preservation of foreground objects. 
+          Our model seamlessly supports the customization of multiple subjects. Even when the bounding boxes of the foreground objects have a large overlap with the background text entities, 
+          the model can distinguish subject-driven foreground generation from text-driven background generation. 
         </h2>
       </div>
+      <div class="item"></div>
+        <!-- Your image here -->
+        <img src="static/images/comparison.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Visual comparison with existing methods on DreamBench objects for the single-subject customization task. 
+          Previous non-grounding based customization methods are inclined to generate objects that are very large and in the center of the image, 
+          which gains benefit in CLIP-I score and DINO score during evaluation. 
+          However, in real-world scenarios, users may expect to flexibly control the size of the subject in the generated images. 
+          They may choose to generate larger background with broader textual information, where, in such cases, non-grounding customization methods cannot generate the desired result. 
+          The visual results demonstrate that our results achieves better identity preservation performance with accurate layout-alignment.
+       </h2>
+     </div>
       <div class="item">
         <!-- Your image here -->
         <img src="static/images/coco.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Reference-guided layout-to-image synthesis result on COCO validation set. Results show that even in complex scenes where there are various background objects, 
-          providing their bounding boxes, our model generates results with precise layout, which not only shows obvious identity preservation of the reference object but also accurate layout-alignment and text-alignment, 
-          achieving flexible layout customized text-to-image generation. 
-          Compared with previous layout-to-image generation methods, our model has competitive accuracy in grounding and significant improvement in identity preservation evaluation.
+          Visaul results of reference-guided image generation with complex layout and text entities as conditions on COCO validation set. 
+          Results show that even if we input complex layouts and text entities to the model, 
+          our model can still generate high-quality scenes with precise layout alignment of all the objects and regions, 
+          and accurate identity preservation of the reference object, while preserving the text-alignment. 
+          Compared with previous layout-to-image generation methods, 
+          our model has a competitive accuracy in grounding the visual concepts and remarkable improvement on identity preservation.
        </h2>
      </div>
      <!-- <div class="item">
