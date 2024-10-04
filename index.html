@@ -211,7 +211,7 @@
           The visual results demonstrate that our results achieves better identity preservation performance with accurate layout-alignment.
        </h2>
      </div>
-      <div class="item">
+      <div class="item"></div>
         <!-- Your image here -->
         <img src="static/images/coco.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
@@ -267,13 +267,12 @@
 
         <div class="content has-text-justified"></div>
           <p>
-            An overview of our proposed framework. It is divided into two steps: (1) Feature extraction. 
-            We use CLIP encoder and DINOv2 encoder to extract text and image embeddings respectively, and use our proposed grounding module to extract the grounding tokens. 
-            (2) Foreground-background cross-attention control in each transformer block of U-Net. During training, we use dataset with single reference object. 
-            In inference stage, the pipeline allows feature injection of multiple reference objects through copied masked cross-attention layers.
-            Our work is the first attempt that introduces precise grounding in the customized image synthesis task, 
-            which jointly controls the size and location for both the image-driven foreground objects and text-driven background, 
-            adaptively harmonizing the poses of the reference objects as well as faithfully preserving their identity.
+            An overview of our GroundingBooth model. The whole pipeline contains two steps: 
+            (1) Feature extraction. We use the CLIP encoder and DINOv2 encoder to extract text and image embeddings, respectively. 
+            We use our proposed grounding module to extract the grounding tokens. 
+            (2) Foreground-background cross-attention control in each transformer block of U-Net. 
+            During training, we use datasets with a single subject as the reference image and only trains a single masked cross-attention layer per transformer block. 
+            During inference, our model supports the generation of multiple subjects in their corresponding locations by reusing the same masked cross-attention layer for each subject.
         </div>
       <!-- <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
