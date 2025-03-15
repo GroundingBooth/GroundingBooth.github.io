@@ -142,7 +142,7 @@
         <h2 class="subtitle has-text-centered">
           We propose GroundingBooth, a framework for grounded text-to-image customization. GroundingBooth supports: (a) grounded single-subject customization, 
           and (b) joint grounded customization for multi-subjects and text entities. 
-          \textit{GroundingBooth achieves prompt following, layout grounding for both subjects and background objects, and identity preservation of subjects simultaneously.}
+          GroundingBooth achieves prompt following, layout grounding for both subjects and background objects, and identity preservation of subjects simultaneously.
         </h2>
       <!-- <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
@@ -160,13 +160,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent studies in text-to-image customization show great success in generating personalized object variants given several images of a subject. 
-            While existing methods focus more on preserving the identity of the subject, they often fall short of controlling the spatial relationship between objects. 
-            In this work, we introduce GroundingBooth, a framework that achieves zero-shot instance-level spatial grounding on both foreground subjects and background objects in the text-to-image customization task. 
-            Our proposed text-image grounding module and masked cross-attention layer allow us to generate personalized images with both accurate layout alignment and identity preservation while maintaining text-image coherence. 
-            With such layout control, our model inherently enables the customization of multiple subjects at once. 
-            Our model is evaluated on both layout-guided image synthesis and reference-based customization tasks, showing strong results compared to existing methods. 
-            Our work is the first work to achieve a joint grounding of both subject-driven foreground generation and text-driven background generation.
+            Recent approaches in text-to-image customization have primarily focused on preserving the identity of the input subject, but often fail to control the spatial location and size of objects. 
+            We introduce GroundingBooth, which achieves zero-shot, instance-level spatial grounding on both foreground subjects and background objects in the text-to-image customization task. 
+            Our proposed grounding module and subject-grounded cross-attention layer enable the creation of personalized images with accurate layout alignment, identity preservation, and strong text-image coherence. 
+            In addition, our model seamlessly supports personalization with multiple subjects. Our model shows strong results in both layout-guided image synthesis and text-to-image customization tasks.
         </div>
       </div>
     </div>
@@ -192,7 +189,7 @@
 
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/multi_obj.jpg" alt="MY ALT TEXT"/>
+        <img src="static/img/multi_obj.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Multi-concept customization on DreamBench objects. Results show that our method achieves joint foreground-background control with text alignment and identity preservation of foreground objects. 
           Our model seamlessly supports the customization of multiple subjects. Even when the bounding boxes of the foreground objects have a large overlap with the background text entities, 
@@ -201,7 +198,7 @@
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/comparison.jpg" alt="MY ALT TEXT"/>
+        <img src="static/img/comparison_final.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Visual comparison with existing methods on DreamBench objects for the single-subject customization task. 
           Previous non-grounding based customization methods are inclined to generate objects that are very large and in the center of the image, 
@@ -213,7 +210,7 @@
      </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/coco_simplified.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/coco_rebuttal_simplified.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Visaul results of reference-guided image generation with complex layout and text entities as conditions on COCO validation set. 
           Results show that even if we input complex layouts and text entities to the model, 
@@ -257,7 +254,7 @@
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/pipeline_final.jpg" alt="MY ALT TEXT"/>
+      <img src="static/img/figure2_pipeline.jpg" alt="MY ALT TEXT"/>
         <!-- <h2 class="subtitle has-text-centered"> -->
           <!-- An overview of our proposed framework. It is divided into two steps: (1) Feature extraction. 
           We use CLIP encoder and DINOv2 encoder to extract text and image embeddings respectively, and use our proposed grounding module to extract the grounding tokens. 
@@ -267,12 +264,8 @@
 
         <div class="content has-text-justified"></div>
           <p>
-            An overview of our GroundingBooth model. The whole pipeline contains two steps: 
-            (1) Feature extraction. We use the CLIP encoder and DINOv2 encoder to extract text and image embeddings, respectively. 
-            We use our proposed grounding module to extract the grounding tokens. 
-            (2) Foreground-background cross-attention control in each transformer block of U-Net. 
-            During training, we use datasets with a single subject as the reference image and only trains a single masked cross-attention layer per transformer block. 
-            During inference, our model supports the generation of multiple subjects in their corresponding locations by reusing the same masked cross-attention layer for each subject.
+            (a) grounded single-subject customization, and (b) joint grounded customization for multi-subjects and text entities. 
+            GroundingBooth achieves prompt following, layout grounding for both subjects and background objects, and identity preservation of subjects simultaneously.
         </div>
       <!-- <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
@@ -284,7 +277,7 @@
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/grounding_module.jpg" alt="MY ALT TEXT"/>
+      <img src="static/img/grounding_module.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Grounding Module of our proposed framework. Our grounding module takes both the prompt-layout pairs and reference object-layout pairs as input. 
           For the foreground reference object, both CLIP text token and the DINOv2 image class token are utilized.
@@ -299,7 +292,7 @@
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/img/teaser.jpg" alt="MY ALT TEXT"/>
+      <img src="static/img/attn_simplified.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Pipeline of our proposed masked cross-attention. Q, K, and V are image query, key, and value respectively, and A is the affinity matrix.
         </h2>
@@ -331,7 +324,7 @@
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/coco_supp.jpg" alt="MY ALT TEXT"/>
+      <img src="static/img/coco_supp.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           More results on complex scene generation on COCO validation set.
         </h2>
